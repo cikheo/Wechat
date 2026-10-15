@@ -1,0 +1,21 @@
+{
+  "name": "ciktab-wechat",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "node scripts/generate-mark.mjs && vite build && vite build --ssr src/entry-server.js --outDir .ssr && node scripts/prerender.mjs",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@phosphor-icons/vue": "^2.2.1",
+    "@vue/server-renderer": "^3.5.0",
+    "gsap": "^3.15.0",
+    "vue": "^3.5.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^6.0.0",
+    "vite": "^8.0.0"
+  }
+}
