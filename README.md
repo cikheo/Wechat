@@ -9,16 +9,12 @@
 安装依赖并构建：
 
 ```sh
-npm ci
+npm ci --include=dev
 npm run build
 ```
 
 构建产物位于 `dist/`。将该目录内的全部文件部署到对应站点根目录，配置域名与 HTTPS 即可。线上采用静态文件托管，无需运行 Node.js 服务。
 
-本地预览构建结果：
+EdgeOne 源码部署：上传完整源码，确保根目录包含 `package.json` 和 `edgeone.json`。安装命令、构建命令和输出目录已在 `edgeone.json` 中配置。
 
-```sh
-npm run preview
-```
-
-访问 `http://localhost:4174/` 查看。
+EdgeOne 直接上传：上传 `dist/` 内的静态文件，确保压缩包根目录包含 `index.html`。
